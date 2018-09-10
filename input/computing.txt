@@ -1,0 +1,24 @@
+Cloud
+Blockchain
+Internet of Things
+Data Science
+Data Engineering
+Machine Learning
+Artificial Intelligence
+Crypto Currency
+Data Mining
+Cluster
+Container
+Hadoop
+Big Data
+Serverless Computing
+Virtualisation
+In-Memory Computing
+Realtime
+Scrum
+Agile
+Velocity
+App
+Digital Transformation
+Industry 4.0
+E-Voting
