@@ -7,6 +7,9 @@ var bullshitHTML = `
 <html>
 	<head>
 		<style type="text/css">
+		table {
+			border-collapse: collapse;
+		}
 		td {
 			font: sans-serif 14pt;
 			border: 1px solid black;
