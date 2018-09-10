@@ -1,3 +1,5 @@
+_Note: This repository is complete **bullshit**._
+
 # Bullshit
 
 Ultra fast, concurrent Bullshit Bingo card generator written in Go.
