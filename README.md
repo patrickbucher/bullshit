@@ -4,6 +4,12 @@ Ultra fast Bullshit Bingo card generator written in Go.
 
 ## Usage
 
+First, compile the `bullshit` program:
+
+```bash
+$ go build cmd/bullshit.go
+```
+
 Generate 100 Bullshit Bingo cards with four columns and three rows based on the
 sample input `computing.txt` into the `output/` directory:
 
