@@ -1,6 +1,6 @@
 # Bullshit
 
-Ultra fast Bullshit Bingo card generator written in Go.
+Ultra fast, concurrent Bullshit Bingo card generator written in Go.
 
 ## Usage
 
@@ -26,15 +26,13 @@ $ ./bullshit < input/business.txt -n 25 -c 5 -r 4
 
 ## Performance
 
-This Bullshit Bingo card generator is ultra fast:
+This Bullshit Bingo card generator is ultra fast, thanks to its concurrent
+implementation:
 
 ```bash
 $ time ./bullshit < input/computing.txt -n 1000 -c 4 -r 4
 ```
 
-    real    0m0.155s
-    user    0m0.058s
-    sys     0m0.099s
-
-It generates one thousand 4x4 Bullshit Bingo cards in less than 0.2 seconds on
-a weak Intel Core i5.
+    real    0m0.083s
+    user    0m0.070s
+    sys     0m0.141s

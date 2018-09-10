@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"math"
 	"os"
+	"sync"
 
 	"github.com/patrickbucher/bullshit"
 )
@@ -30,6 +31,8 @@ var cards = flag.Int("n", 1, "Number of Bullshit Bingo cards to be generated")
 var cols = flag.Int("c", 4, "Number of columns for each Bullshit Bingo card")
 var rows = flag.Int("r", 4, "Number of rows for each Bullshit Bingo card")
 
+var wg sync.WaitGroup
+
 func main() {
 	flag.Parse()
 	if *rows < 1 || *cols < 1 || *cards < 1 {
@@ -50,17 +53,26 @@ func main() {
 	if err := os.Mkdir(outputDir, 0755); err != nil {
 		fatal("creating %s: %v\n", outputDir, err)
 	}
-	w := int(math.Log10(float64(*cards))) + 1
 	for i := 0; i < *cards; i++ {
-		format := "bullshit%0*d.html"
-		filename := outputDir + string(os.PathSeparator) + fmt.Sprintf(format, w, i+1)
-		file, err := os.Create(filename)
-		if err != nil {
-			fatal("creating file %s: %v\n", filename, err)
-		}
-		bullshit.BullshitTemplate.Execute(file, arrange(terms, *rows, *cols))
-		file.Close()
+		go produceBullshit(terms, i)
+		wg.Add(1)
 	}
+	wg.Wait()
+}
+
+func produceBullshit(terms []string, fileNumber int) {
+	w := int(math.Log10(float64(*cards))) + 1
+	format := "bullshit%0*d.html"
+	filename := outputDir + string(os.PathSeparator) +
+		fmt.Sprintf(format, w, fileNumber+1)
+	file, err := os.Create(filename)
+	if err != nil {
+		fatal("creating file %s: %v\n", filename, err)
+	}
+	defer file.Close()
+	bs := arrange(terms, *rows, *cols)
+	bullshit.BullshitTemplate.Execute(file, bs)
+	wg.Done()
 }
 
 func arrange(terms []string, rows, cols int) Bullshit {
