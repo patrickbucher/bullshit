@@ -1,0 +1,37 @@
+Burn-down Chart
+Burn-up Chart
+Coherent/Coherence
+Dialy Scrum
+Definition of Done
+Definition of Ready
+Development Team
+Agile
+Emergence
+Empiricism
+Engineering standards
+Forecast
+Increment
+Product Backlog
+Refinement
+Workshop
+Product Owner
+Ready
+Scrum
+Scrum Board
+Kanban Board
+Scrum Guide
+Scrum Master
+Scrum Team
+Scrum Values
+Self-organization
+Sprint
+Sprint Backlog
+Sprint Goal
+Sprint Planning
+Sprint Retrospective
+Sprint Review
+Stakeholder
+Commitment
+Technical Debt
+Values
+Velocity
