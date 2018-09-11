@@ -1,24 +1,24 @@
+Agile
 Burn-down Chart
 Burn-up Chart
 Coherent/Coherence
-Dialy Scrum
+Commitment
 Definition of Done
 Definition of Ready
 Development Team
-Agile
+Dialy Scrum
 Emergence
 Empiricism
 Engineering standards
 Forecast
 Increment
+Kanban Board
 Product Backlog
-Refinement
-Workshop
 Product Owner
 Ready
+Refinement
 Scrum
 Scrum Board
-Kanban Board
 Scrum Guide
 Scrum Master
 Scrum Team
@@ -31,7 +31,7 @@ Sprint Planning
 Sprint Retrospective
 Sprint Review
 Stakeholder
-Commitment
 Technical Debt
 Values
 Velocity
+Workshop
