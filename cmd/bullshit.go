@@ -24,7 +24,8 @@ type Row struct {
 }
 
 type Col struct {
-	Term string
+	Term  string
+	Index int
 }
 
 var cards = flag.Int("n", 1, "Number of Bullshit Bingo cards to be generated")
@@ -76,13 +77,15 @@ func produceBullshit(terms []string, fileNumber int) {
 }
 
 func arrange(terms []string, rows, cols int) Bullshit {
+	var index int
 	items := bullshit.Shuffle(terms)
 	var bullshit Bullshit
 	bsRows := make([]Row, rows)
 	for r := 0; r < rows; r++ {
 		bsCols := make([]Col, cols)
 		for c := 0; c < cols; c++ {
-			bsCols[c] = Col{items[r*rows+c]}
+			bsCols[c] = Col{items[r*rows+c], index}
+			index++
 		}
 		bsRows[r] = Row{bsCols}
 	}

@@ -1,7 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
+        <meta charset="utf-8">
 		<style type="text/css">
 		table {
 			border-collapse: collapse;
@@ -12,6 +12,7 @@
 			padding: 1em;
 			vertical-align: middle;
 			text-align: center;
+			font-weight: bold;
 		}
 		</style>
 		<title>Bullshit Bingo</title>
@@ -22,52 +23,71 @@
 			
 			<tr>
 				
-				<td>Data Science</td>
+				<td id="0">Digital Transformation</td>
 				
-				<td>Hadoop</td>
+				<td id="1">Blockchain</td>
 				
-				<td>In-Memory Computing</td>
+				<td id="2">Virtualisation</td>
 				
-				<td>Data Mining</td>
-				
-			</tr>
-			
-			<tr>
-				
-				<td>Internet of Things</td>
-				
-				<td>Industry 4.0</td>
-				
-				<td>Artificial Intelligence</td>
-				
-				<td>Digital Transformation</td>
+				<td id="3">App</td>
 				
 			</tr>
 			
 			<tr>
 				
-				<td>Realtime</td>
+				<td id="4">Velocity</td>
 				
-				<td>Scrum</td>
+				<td id="5">Container</td>
 				
-				<td>Container</td>
+				<td id="6">Data Science</td>
 				
-				<td>Virtualisation</td>
+				<td id="7">Industry 4.0</td>
 				
 			</tr>
 			
 			<tr>
 				
-				<td>Cloud</td>
+				<td id="8">E-Voting</td>
 				
-				<td>Data Engineering</td>
+				<td id="9">Internet of Things</td>
 				
-				<td>E-Voting</td>
+				<td id="10">Machine Learning</td>
 				
-				<td>Machine Learning</td>
+				<td id="11">Data Mining</td>
+				
+			</tr>
+			
+			<tr>
+				
+				<td id="12">Cluster</td>
+				
+				<td id="13">Agile</td>
+				
+				<td id="14">Scrum</td>
+				
+				<td id="15">Serverless Computing</td>
 				
 			</tr>
 			
 		</table>
+		<script>
+            var i = 0;
+            while (true) {
+                var element = document.getElementById(i++)
+                if (element == null) {
+                    break;
+                }
+                element.addEventListener("click", function(e) {
+                    var element = document.getElementById(e.srcElement.id);
+                    if (element.style.backgroundColor != "green") {
+                        element.style.backgroundColor = "green";
+                        element.style.color = "white";
+                    } else {
+                        element.style.backgroundColor = "white";
+                        element.style.color = "black";
+                    }
+                });
+            }
+        </script>
 	</body>
 </html>

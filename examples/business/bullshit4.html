@@ -1,7 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
+        <meta charset="utf-8">
 		<style type="text/css">
 		table {
 			border-collapse: collapse;
@@ -12,6 +12,7 @@
 			padding: 1em;
 			vertical-align: middle;
 			text-align: center;
+			font-weight: bold;
 		}
 		</style>
 		<title>Bullshit Bingo</title>
@@ -22,74 +23,71 @@
 			
 			<tr>
 				
-				<td>Win-win</td>
+				<td id="0">At the end of the day</td>
 				
-				<td>Mind share</td>
+				<td id="1">Impact</td>
 				
-				<td>Reimagine</td>
+				<td id="2">Patriarchy</td>
 				
-				<td>Face time</td>
-				
-				<td>Bring to the table</td>
+				<td id="3">Sea change</td>
 				
 			</tr>
 			
 			<tr>
 				
-				<td>Robust</td>
+				<td id="4">Sisterhood</td>
 				
-				<td>Grow</td>
+				<td id="5">Synergy</td>
 				
-				<td>Diversity</td>
+				<td id="6">Generation X</td>
 				
-				<td>Disruptive innovation</td>
-				
-				<td>Roadmap</td>
+				<td id="7">On the runway</td>
 				
 			</tr>
 			
 			<tr>
 				
-				<td>Impact</td>
+				<td id="8">Bring to the table</td>
 				
-				<td>Survival strategy</td>
+				<td id="9">Wheelhouse</td>
 				
-				<td>Exit strategy</td>
+				<td id="10">Organic growth</td>
 				
-				<td>Buzzword</td>
-				
-				<td>Unpack</td>
+				<td id="11">Empowerment</td>
 				
 			</tr>
 			
 			<tr>
 				
-				<td>Clear goal</td>
+				<td id="12">Wellness</td>
 				
-				<td>Break through the clutter</td>
+				<td id="13">Headlights</td>
 				
-				<td>Moving forward</td>
+				<td id="14">Millennial</td>
 				
-				<td>Headlights</td>
-				
-				<td>Holistic approach</td>
-				
-			</tr>
-			
-			<tr>
-				
-				<td>Heavy lifting</td>
-				
-				<td>Sisterhood</td>
-				
-				<td>Organic growth</td>
-				
-				<td>Paradigm</td>
-				
-				<td>Push the envelope</td>
+				<td id="15">Reimagine</td>
 				
 			</tr>
 			
 		</table>
+		<script>
+            var i = 0;
+            while (true) {
+                var element = document.getElementById(i++)
+                if (element == null) {
+                    break;
+                }
+                element.addEventListener("click", function(e) {
+                    var element = document.getElementById(e.srcElement.id);
+                    if (element.style.backgroundColor != "green") {
+                        element.style.backgroundColor = "green";
+                        element.style.color = "white";
+                    } else {
+                        element.style.backgroundColor = "white";
+                        element.style.color = "black";
+                    }
+                });
+            }
+        </script>
 	</body>
 </html>

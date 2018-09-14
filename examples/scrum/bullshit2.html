@@ -1,7 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
+        <meta charset="utf-8">
 		<style type="text/css">
 		table {
 			border-collapse: collapse;
@@ -12,6 +12,7 @@
 			padding: 1em;
 			vertical-align: middle;
 			text-align: center;
+			font-weight: bold;
 		}
 		</style>
 		<title>Bullshit Bingo</title>
@@ -22,74 +23,71 @@
 			
 			<tr>
 				
-				<td>Dialy Scrum</td>
+				<td id="0">Development Team</td>
 				
-				<td>Workshop</td>
+				<td id="1">Agile</td>
 				
-				<td>Scrum Board</td>
+				<td id="2">Increment</td>
 				
-				<td>Self-organization</td>
-				
-				<td>Scrum Master</td>
+				<td id="3">Self-organization</td>
 				
 			</tr>
 			
 			<tr>
 				
-				<td>Scrum Values</td>
+				<td id="4">Sprint Retrospective</td>
 				
-				<td>Sprint</td>
+				<td id="5">Definition of Done</td>
 				
-				<td>Velocity</td>
+				<td id="6">Burn-down Chart</td>
 				
-				<td>Values</td>
-				
-				<td>Scrum Guide</td>
+				<td id="7">Engineering standards</td>
 				
 			</tr>
 			
 			<tr>
 				
-				<td>Stakeholder</td>
+				<td id="8">Ready</td>
 				
-				<td>Coherent/Coherence</td>
+				<td id="9">Commitment</td>
 				
-				<td>Engineering standards</td>
+				<td id="10">Sprint Backlog</td>
 				
-				<td>Kanban Board</td>
-				
-				<td>Product Backlog</td>
+				<td id="11">Refinement</td>
 				
 			</tr>
 			
 			<tr>
 				
-				<td>Increment</td>
+				<td id="12">Stakeholder</td>
 				
-				<td>Empiricism</td>
+				<td id="13">Emergence</td>
 				
-				<td>Agile</td>
+				<td id="14">Kanban Board</td>
 				
-				<td>Sprint Review</td>
-				
-				<td>Definition of Done</td>
-				
-			</tr>
-			
-			<tr>
-				
-				<td>Product Owner</td>
-				
-				<td>Sprint Planning</td>
-				
-				<td>Definition of Ready</td>
-				
-				<td>Refinement</td>
-				
-				<td>Scrum</td>
+				<td id="15">Sprint Planning</td>
 				
 			</tr>
 			
 		</table>
+		<script>
+            var i = 0;
+            while (true) {
+                var element = document.getElementById(i++)
+                if (element == null) {
+                    break;
+                }
+                element.addEventListener("click", function(e) {
+                    var element = document.getElementById(e.srcElement.id);
+                    if (element.style.backgroundColor != "green") {
+                        element.style.backgroundColor = "green";
+                        element.style.color = "white";
+                    } else {
+                        element.style.backgroundColor = "white";
+                        element.style.color = "black";
+                    }
+                });
+            }
+        </script>
 	</body>
 </html>
